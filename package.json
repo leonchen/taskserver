@@ -1,0 +1,27 @@
+{
+  "name": "taskserver",
+  "description": "running tasks and get cached results",
+  "keywords": ["task", "stats", "solr"],
+  "version": "0.0.1",
+  "homepage": "https://github.com/leonchen/taskserver",
+  "bugs": "https://github.com/leonchen/taskserver/issues",
+  "author": "Leon Chen",
+  "licenses": [ { "type": "MIT" }],
+  "engines": { "node": ">=0.6.0" },
+  "main" : "taskserver",
+  "directories": {
+  },
+  "bin": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leonchen/taskserver.git"
+  },
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.0beta6",
+    "jade": "*",
+    "sqlite": "1.0.4"
+  }
+}
