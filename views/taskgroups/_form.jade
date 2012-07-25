@@ -1,0 +1,17 @@
+form(method='POST')
+  table
+    tr
+      th Name
+      td
+        input(name='entity[name]',type='text')
+    tr
+      th Config
+      td
+        textarea(name='entity[config]')
+    tr
+      th Enabled
+      td
+        input(name='entity[enabled]', type='hidden')
+        input.checkbox(type='checkbox', value='entity[enabled]', checked='checked')
+  p
+    input(type='submit', value='Submit')

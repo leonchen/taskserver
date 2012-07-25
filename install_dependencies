@@ -1,0 +1,6 @@
+#! /bin/bash
+npm install express
+npm install jade
+npm install sqlite3
+npm install sequelize
+npm install fibers

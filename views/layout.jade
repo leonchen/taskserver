@@ -1,7 +1,26 @@
-doctype 5
+!!!
 html
   head
-    title= title
+    title= site.title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/jquery.js')
+    script(src='/javascripts/jquery-ui.js')
+    script(src='/javascripts/site.js')
   body
-    block content
+    #header
+      span#logo= site.title
+      span#mainMenu
+        ul
+          li
+            a(href='/taskgroups') TaskGroups
+          li
+            a(href='/tasks') Tasks
+          li
+            a(href='/results') Results
+    #body
+      #messages
+        for message in messages()
+          p
+            span!= message
+      block content
+    #footer

@@ -7,7 +7,7 @@
   "bugs": "https://github.com/leonchen/taskserver/issues",
   "author": "Leon Chen",
   "licenses": [ { "type": "MIT" }],
-  "engines": { "node": ">=0.6.0" },
+  "engines": { "node": ">=0.6.18" },
   "main" : "taskserver",
   "directories": {
   },
@@ -22,6 +22,8 @@
   "dependencies": {
     "express": "3.0.0beta6",
     "jade": "*",
-    "sqlite": "1.0.4"
+    "sqlite3": ">=2.0.0",
+    "sequelize": "1.3.x",
+    "fibers": ">=0.6.8"
   }
 }

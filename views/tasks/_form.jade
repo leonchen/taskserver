@@ -1,0 +1,23 @@
+form(method='POST')
+  table
+    tr
+      th Name
+      td
+        input(name='entity[name]',type='text')
+    tr
+      th Resource
+      td
+        textarea(name='entity[resource]')
+    tr
+      th TaskGroup
+      td
+        select(name='entity[TaskGroupId]')
+          for group, id in taskGroups
+            option(value='#{id}')= group.name
+    tr
+      th Enabled
+      td
+        input(name='entity[enabled]', type='hidden')
+        input.checkbox(type='checkbox', value='entity[enabled]', checked='checked')
+  p
+    input(type='submit', value='Submit')

@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+  h3 Tasks
+  p
+  input.create(type='button', value='Create New')
+  #entityForm
+    include _form
+    
+  #entityList
+    table.table
+      tr
+        th Name
+        th Resource
+        th TaskGroup 
+        th Enabled
+        th
+      for row in rows  
+        tr
+          td= row.name
+          td= row.resource
+          td= taskGroups[row.TaskGroupId].name
+          td= row.enabled
+          td
+            a.editButton(href='#{editPath(resource, row)}') Edit
+            a.deleteButton(href='#{deletePath(resource, row)}') Remove
